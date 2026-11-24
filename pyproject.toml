@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tradename"
+version = "0.1.0"
+description = "Match company names across spellings, legal forms (Ltd, LLC, GmbH, S.A., ذ.م.م), abbreviations, word order and scripts. Zero dependencies."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "tradename contributors" }]
+keywords = [
+  "company-names", "name-matching", "fuzzy-matching", "entity-resolution", "record-linkage",
+  "deduplication", "kyc", "sanctions-screening", "legal-forms", "arabic", "transliteration",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Financial and Insurance Industry",
+  "License :: OSI Approved :: MIT License",
+  "Natural Language :: English",
+  "Natural Language :: Arabic",
+  "Programming Language :: Python :: 3",
+  "Topic :: Office/Business",
+  "Topic :: Text Processing :: Linguistic",
+]
+
+[project.urls]
+Homepage = "https://github.com/RealAoss/tradename"
+Issues = "https://github.com/RealAoss/tradename/issues"
+
+[project.scripts]
+tradename = "tradename.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["tradename", "tradename.*"]
